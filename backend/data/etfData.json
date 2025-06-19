@@ -1,0 +1,138 @@
+{
+  "categories": {
+    "nifty50": {
+      "label": "Nifty 50",
+      "description": "ETFs tracking the Nifty 50 index",
+      "symbols": ["NIFTYBEES", "ICICINIFTY", "HDFCNIFTY", "UTINIFTY", "SBINIFTY", "UTINIFTETF", "AXISNIFTY", "BSLNIFTY", "SETFNIF50", "IDFNIFTYET", "NIFTYETF", "NIFTY1", "NETF", "NIFTYIETF", "NIFTYBETF", "IVZINNIFTY"]
+    },
+    "banking": {
+      "label": "Banking",
+      "description": "ETFs focused on banking sector stocks",
+      "symbols": ["BANKBEES", "BANKIETF", "BANKETF", "UTIBANKETF", "AXISBNKETF", "HDFCNIFBAN", "BANKNIFTY1", "EBANKNIFTY", "SETFNIFBK", "ABSLBANETF", "BANKBETF", "BBNPNBETF", "BFSI"]
+    },
+    "psuBanking": {
+      "label": "PSU Banking",
+      "description": "ETFs focused on public sector banks",
+      "symbols": ["PSUBNKBEES", "PSUBNKIETF", "PSUBANK", "HDFCPSUBK", "SBIBPB", "BANKPSU"]
+    },
+    "privateBanking": {
+      "label": "Private Banking",
+      "description": "ETFs focused on private sector banks",
+      "symbols": ["PVTBANIETF", "HDFCPVTBAN", "NPBET", "SBIETFPB"]
+    },
+    "largeCap": {
+      "label": "Large Cap",
+      "description": "ETFs focused on large cap companies",
+      "symbols": ["NIFTYBEES", "ICICINIFTY", "HDFCNIFTY", "UTINIFTY", "SBINIFTY"]
+    },
+    "midCap": {
+      "label": "Mid Cap",
+      "description": "ETFs focused on mid cap companies",
+      "symbols": ["JUNIORBEES", "ICICIMID150", "MOTILALM100", "KOTAKMID50", "NIPPMID150", "MIDCAPIETF", "MIDCAP", "MID150", "MIDSELIETF", "MID150BEES", "MID150CASE", "MIDCAPETF", "NIFMID150", "HDFCMID150"]
+    },
+    "smallCap": {
+      "label": "Small Cap",
+      "description": "ETFs focused on small cap companies",
+      "symbols": ["NIPPSMLCAP", "ICICISMLCAP", "SBIETFSC", "MOTISMLCAP", "HDFCSMLCAP", "SMALLCAP", "MOSMALL250", "HDFCSML250"]
+    },
+    "it": {
+      "label": "Information Technology",
+      "description": "ETFs focused on information technology sector",
+      "symbols": ["ITBEES", "ITETF", "IT", "NIFITETF", "SBIETFIT", "AXISTECETF", "TECH", "HDFCNIFIT", "ITETFADD", "ITIETF"]
+    },
+    "sensex": {
+      "label": "Sensex",
+      "description": "ETFs tracking the Sensex index",
+      "symbols": ["HDFCSENSEX", "AXSENSEX", "SENSEXETF", "LICNETFSEN", "SENSEXIETF", "BSLSENETFG", "UTISENSETF"]
+    },
+    "gold": {
+      "label": "Precious Metals - Gold",
+      "description": "ETFs investing in gold",
+      "symbols": ["GOLDBEES", "HDFCGOLD", "GOLDIETF", "AXISGOLD", "SETFGOLD", "GROWWGOLD", "IVZINGOLD", "GOLDETF", "GOLDSHARE", "GOLDCASE", "GOLDETFADD", "UNIONGOLD", "TATAGOLD", "BSLGOLDETF", "LICMFGOLD", "QGOLDHALF", "GOLD1", "EGOLD", "GOLD360", "BBNPPGOLD"]
+    },
+    "silver": {
+      "label": "Precious Metals - Silver",
+      "description": "ETFs investing in silver",
+      "symbols": ["SILVERBEES", "SILVERETF", "SILVRETF", "SILVER", "SILVER1", "SILVERIETF", "SILVERCASE", "SBISILVER", "TATSILV", "AXISILVER", "HDFCSILVER", "ESILVER", "GROWWSLVR"]
+    },
+    "next50": {
+      "label": "Next 50",
+      "description": "ETFs tracking Next 50 index",
+      "symbols": ["JUNIORBEES", "HDFCNEXT50", "NEXT50", "NEXT50IETF", "UTINEXT50", "SETFNN50", "MONEXT50", "ABSLNN50ET"]
+    },
+    "liquid": {
+      "label": "Liquid",
+      "description": "Liquid ETFs for short term investments",
+      "symbols": ["LIQUIDBEES", "HDFCLIQUID", "SBILIQUID", "ICICILIQUID", "UTILIQUIB", "LIQUIDETF", "LIQUIDBETF", "LIQUID", "LIQUID1", "LIQUIDPLUS", "LIQUIDSHRI", "LIQUIDCASE", "AONELIQUID", "ABSLLIQUID", "GROWWLIQID", "CASHIETF", "LIQUIDIETF"]
+    },
+    "international": {
+      "label": "International",
+      "description": "ETFs with international exposure",
+      "symbols": ["MOTILALNAS100", "MOTILALSP500", "ICICINASDAQ", "SBIINTERNAT", "HDFCNASDAQ", "HNGSNGBEES", "MASPTOP50", "MON100", "MAFANG"]
+    },
+    "consumption": {
+      "label": "Consumption",
+      "description": "ETFs focused on consumer goods and services",
+      "symbols": ["CONSUMBEES", "AXISCETF", "CONS", "CONSUMIETF", "SBIETFCON", "CONSUMER"]
+    },
+    "healthcare": {
+      "label": "Healthcare",
+      "description": "ETFs focused on healthcare sector",
+      "symbols": ["PHARMABEES", "AXISHCETF", "HEALTHY", "HEALTHIETF", "HEALTHADD", "MOHEALTH"]
+    },
+    "gilt": {
+      "label": "Gilt",
+      "description": "Government securities ETFs",
+      "symbols": ["GSEC10ABSL", "GSEC10IETF", "NIF5GETF", "GILT5YBEES", "GSEC5IETF", "LICNETFGSC", "GSEC10YEAR", "NIF10GETF", "LTGILTBEES", "SETF10GILT", "ABGSEC", "MOGSEC"]
+    },
+    "momentum": {
+      "label": "Momentum",
+      "description": "Momentum factor based ETFs",
+      "symbols": ["MOMENTUM", "HDFCMOMENT", "MOMOMENTUM", "MOMENTUM50", "GROWWMOM50", "MOM30IETF", "MOM50", "MOM100"]
+    },
+    "value": {
+      "label": "Value",
+      "description": "Value factor based ETFs",
+      "symbols": ["HDFCVALUE", "AXISVALUE", "NV20BEES", "NV20IETF", "NV20", "VAL30IETF", "MOVALUE"]
+    },
+    "quality": {
+      "label": "Quality",
+      "description": "Quality factor based ETFs",
+      "symbols": ["HDFCQUAL", "QUAL30IETF", "NIFTYQLITY", "SBIETFQLTY", "MOQUALITY"]
+    },
+    "infrastructure": {
+      "label": "Infrastructure",
+      "description": "Infrastructure sector ETFs",
+      "symbols": ["INFRABEES", "INFRAIETF", "MOINFRA"]
+    },
+    "lowVolatility": {
+      "label": "Low Volatility",
+      "description": "Low volatility ETFs",
+      "symbols": ["LOWVOL", "LOWVOL1", "HDFCLOWVOL", "MOLOWVOL", "GROWWLOVOL", "LOWVOLIETF", "ALPL30IETF"]
+    },
+    "equalWeight": {
+      "label": "Equal Weight",
+      "description": "Equal weighted index ETFs",
+      "symbols": ["EQUAL50", "SBINEQWETF", "MON50EQUAL", "NIFTY100EW", "EQUAL200"]
+    },
+    "metals": {
+      "label": "Metals",
+      "description": "Metal sector ETFs",
+      "symbols": ["METAL", "METALIETF"]
+    },
+    "misc": {
+      "label": "Miscellaneous",
+      "description": "Other ETF categories including themes like Auto, ESG, Defense, Multicap, etc.",
+      "symbols": [
+        "TOP10ADD", "AUTOBEES", "AUTOIETF", "SDL26BEES", "EBBETF0431", "EBBETF0430",
+        "EBBETF0433", "BBETF0432", "ICICIB22", "AXISBPSETF", "ESG", "COMMOIETF", "FMCGIETF",
+        "LICNFNHGP", "MNC", "BSE500IETF", "MSCIINDIA", "DIVOPPBEES", "MONIFTY500",
+        "HDFCGROWTH", "CPSEETF", "MULTICAP", "ALPHAETF", "EVINDIA", "MOTOUR", "HDFCBSE500",
+        "MOPSE", "TNIDETF", "ALPHA", "GROWWN200", "ECAPINSURE", "MIDSMALL", "FINIETF",
+        "MODEFENCE", "GROWWDEFNC", "MOREALTY", "UTISXN50", "MOCAPITAL", "GROWWRAIL",
+        "NIF100IETF", "TOP100CASE", "HDFCNIF100", "NIF100BEES", "AONETOTAL", "SNXT30BEES",
+        "NEXT30ADD", "MONQ50", "MIDQ50ADD", "OILIETF", "MAKEINDIA", "MOMGF"
+      ]
+    }
+  }
+}
