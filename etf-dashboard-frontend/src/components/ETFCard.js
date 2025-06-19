@@ -89,14 +89,16 @@ export default function ETFCard({ etf, onFetchMA, loading, onRetry }) {
         </div>
       ) : (
         <>
-          {/* Category Badge - Moved to top for better hierarchy */}
-          <div className={`category-badge ${isValid(etf.category) ? etf.category : 'unknown'}`}>
-            {formatCategory(etf.category)}
-            {etf.fallbackSource &&
-              <span className="data-source">{etf.fallbackSource === 'yahoo' ? ' (Yahoo)' :
-                                           etf.fallbackSource === 'google_sheets' ? ' (G-Sheets)' : ''}</span>
-            }
-          </div>
+          {/* Category Badge - Only show if value is not N/A */}
+          {formatCategory(etf.category) !== 'N/A' && (
+            <div className={`category-badge ${isValid(etf.category) ? etf.category : 'unknown'}`}>
+              {formatCategory(etf.category)}
+              {etf.fallbackSource &&
+                <span className="data-source">{etf.fallbackSource === 'yahoo' ? ' (Yahoo)' :
+                                             etf.fallbackSource === 'google_sheets' ? ' (G-Sheets)' : ''}</span>
+              }
+            </div>
+          )}
 
           {/* ETF Name - Enlarged and more prominent */}
           <div className="etf-name-container">
@@ -113,9 +115,6 @@ export default function ETFCard({ etf, onFetchMA, loading, onRetry }) {
             </div>
             <div className={`price-change ${priceChangeClass}`}>
               {isValid(etf.priceChange) ? formatPercent(etf.priceChange) : <span className="text-muted">N/A</span>}
-              {isValid(etf.priceChangeStr) &&
-                <div className="price-change-detail">{etf.priceChangeStr.replace(/today$/, '')}</div>
-              }
             </div>
           </div>
 

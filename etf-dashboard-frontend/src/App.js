@@ -5,10 +5,9 @@ import ETFGrid from './components/ETFGrid';
 import Header from './layout/Header';
 import { fetchMovingAverages, fetchETF, fetchOtherETFs, fetchETFCategories, fetchETFsByStructuredCategory } from './api/etfApi';
 import { useETFsByCategory } from './hooks/useETFs';
-import { CATEGORIES } from './constants';
 
 function App() {
-  const [category, setCategory] = useState('large-cap');
+  const [category, setCategory] = useState('');
   const [recommendation, setRecommendation] = useState('all');
   const [price, setPrice] = useState('all');
   const [showOnlyWithData, setShowOnlyWithData] = useState(true);
@@ -26,6 +25,16 @@ function App() {
     fetchETFCategories()
       .then(categories => {
         setStructuredCategories(categories);
+        // Set default category to Nifty 50
+        if (Object.keys(categories).includes('nifty50')) {
+          setSelectedStructuredCategory('nifty50');
+        } else {
+          // Fallback to first category if nifty50 not found
+          const firstCategory = Object.keys(categories)[0];
+          if (firstCategory && !category) {
+            setCategory(`structured-${firstCategory}`);
+          }
+        }
       })
       .catch(error => {
         console.error("Failed to fetch ETF categories:", error);
@@ -34,10 +43,7 @@ function App() {
 
   // Convert structured categories to dropdown options
   const categoryOptions = useMemo(() => {
-    // Start with the standard categories
-    const standardCategories = [...CATEGORIES];
-
-    // Add structured categories
+    // Only use structured categories from the backend
     const structuredOptions = Object.entries(structuredCategories).map(([key, category]) => ({
       value: `structured-${key}`,
       label: category.label,
@@ -45,10 +51,8 @@ function App() {
       isStructured: true
     }));
 
-    // Add "Others" category
-    standardCategories.push({ value: 'others', label: 'Others' });
-
-    return [...standardCategories, ...structuredOptions];
+    // Add "Others" category at the end
+    return [...structuredOptions, { value: 'others', label: 'Others' }];
   }, [structuredCategories]);
 
   // Sync groupedEtfs from hook to local state for targeted updates
@@ -197,22 +201,7 @@ function App() {
         onPriceChange={setPrice}
         categories={categoryOptions}
       />
-      <div style={{marginBottom: 20, textAlign: 'right', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-        <label style={{fontWeight: 500, fontSize: '1rem', cursor: 'pointer'}}>
-          <input
-            type="checkbox"
-            checked={showOnlyWithData}
-            onChange={e => setShowOnlyWithData(e.target.checked)}
-            style={{marginRight: 8}}
-          />
-          Show only ETFs with data
-        </label>
-        {/* Removed "Show Top 5 Liquid ETFs" checkbox */}
-      </div>
       {displayContent()}
-      <div className="last-updated">
-        <p>Last Updated: {/* Optionally add last update time here if available */}</p>
-      </div>
     </div>
   );
 }

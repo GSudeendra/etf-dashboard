@@ -96,13 +96,14 @@ export default function ETFGrid({
   if (categoryTitle) {
     const filteredEtfs = filterEtfs(etfs || []);
     const sorted = sortEtfs(filteredEtfs);
-    const visible = sorted.slice(0, visibleCount);
+    // Not limiting to visibleCount anymore to show all ETFs at once
+    const visible = sorted;
 
     return (
       <div className="etf-category-container">
         {renderCategoryHeader(categoryTitle, categoryDescription)}
         <div className="etf-count">{filteredEtfs.length} ETFs found</div>
-        <div className="etf-grid" ref={gridRef} style={{ maxHeight: 600, overflowY: 'auto' }}>
+        <div className="etf-grid">
           {visible.length > 0 ? (
             visible.map(etf => (
               <ETFCard
