@@ -25,15 +25,25 @@ function App() {
     fetchETFCategories()
       .then(categories => {
         setStructuredCategories(categories);
-        // Set default category to Nifty 50
-        if (Object.keys(categories).includes('nifty50')) {
-          setSelectedStructuredCategory('nifty50');
-        } else {
-          // Fallback to first category if nifty50 not found
-          const firstCategory = Object.keys(categories)[0];
-          if (firstCategory && !category) {
-            setCategory(`structured-${firstCategory}`);
-          }
+
+        // Always select the first category in the dropdown
+        const firstCategory = Object.keys(categories)[0];
+        if (firstCategory) {
+          setSelectedStructuredCategory(firstCategory);
+
+          // Also fetch ETFs for this category immediately
+          setStructuredCategoryLoading(true);
+          fetchETFsByStructuredCategory(firstCategory)
+            .then(data => {
+              setStructuredCategoryETFs(data);
+            })
+            .catch(error => {
+              console.error(`Failed to fetch ETFs for category ${firstCategory}:`, error);
+              setStructuredCategoryETFs([]);
+            })
+            .finally(() => {
+              setStructuredCategoryLoading(false);
+            });
         }
       })
       .catch(error => {
