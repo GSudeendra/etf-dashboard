@@ -1,15 +1,11 @@
 import React, { useState, useCallback, useEffect, useMemo } from 'react';
-import './App.css';
-import Filters from './components/Filters';
-import ETFGrid from './components/ETFGrid';
-import Header from './layout/Header';
-import { fetchMovingAverages, fetchETF, fetchOtherETFs, fetchETFCategories, fetchETFsByStructuredCategory } from './api/etfApi';
-import { useETFsByCategory } from './hooks/useETFs';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import DashboardPage from './components/DashboardPage';
+import Header from '../layout/Header';
+import Filters from './Filters';
+import ETFGrid from './ETFGrid';
+import { fetchMovingAverages, fetchETF, fetchOtherETFs, fetchETFCategories, fetchETFsByStructuredCategory } from '../api/etfApi';
+import { useETFsByCategory } from '../hooks/useETFs';
 
-function App() {
+function DashboardPage() {
   const [category, setCategory] = useState('');
   const [recommendation, setRecommendation] = useState('all');
   const [price, setPrice] = useState('all');
@@ -23,18 +19,13 @@ function App() {
   const { data: groupedEtfs, loading: groupedLoading, error: groupedError } = useETFsByCategory();
   const [groupedEtfsState, setGroupedEtfsState] = useState(null);
 
-  // Fetch structured categories when component mounts
   useEffect(() => {
     fetchETFCategories()
       .then(categories => {
         setStructuredCategories(categories);
-
-        // Always select the first category in the dropdown
         const firstCategory = Object.keys(categories)[0];
         if (firstCategory) {
           setSelectedStructuredCategory(firstCategory);
-
-          // Also fetch ETFs for this category immediately
           setStructuredCategoryLoading(true);
           fetchETFsByStructuredCategory(firstCategory)
             .then(data => {
@@ -54,36 +45,27 @@ function App() {
       });
   }, []);
 
-  // Convert structured categories to dropdown options
   const categoryOptions = useMemo(() => {
-    // Only use structured categories from the backend
     const structuredOptions = Object.entries(structuredCategories).map(([key, category]) => ({
       value: `structured-${key}`,
       label: category.label,
       description: category.description,
       isStructured: true
     }));
-
-    // Add "Others" category at the end
     return [...structuredOptions, { value: 'others', label: 'Others' }];
   }, [structuredCategories]);
 
-  // Sync groupedEtfs from hook to local state for targeted updates
   useEffect(() => {
     if (groupedEtfs && !groupedLoading) {
       setGroupedEtfsState(groupedEtfs);
     }
   }, [groupedEtfs, groupedLoading]);
 
-  // Handle category change
   const handleCategoryChange = (categoryValue) => {
-    // Check if it's a structured category
     if (categoryValue.startsWith('structured-')) {
       const categoryKey = categoryValue.replace('structured-', '');
       setSelectedStructuredCategory(categoryKey);
-      setCategory(''); // Clear the standard category
-
-      // Fetch ETFs for this structured category
+      setCategory('');
       setStructuredCategoryLoading(true);
       fetchETFsByStructuredCategory(categoryKey)
         .then(data => {
@@ -102,7 +84,6 @@ function App() {
     }
   };
 
-  // Fetch "Others" category ETFs when that category is selected
   useEffect(() => {
     if (category === 'others') {
       setOtherETFsLoading(true);
@@ -120,21 +101,17 @@ function App() {
     }
   }, [category]);
 
-  // Fetch moving averages for a symbol
   const handleFetchMA = useCallback(async (symbol) => {
     return await fetchMovingAverages(symbol);
   }, []);
 
-  // Targeted retry handler for ETFCard
   const handleRetry = async (symbol) => {
     if (!groupedEtfsState) return;
-    // Find the category for this symbol
     let foundCategory = null;
     Object.entries(groupedEtfsState).forEach(([cat, etfs]) => {
       if (etfs.some(e => e.symbol === symbol)) foundCategory = cat;
     });
     if (!foundCategory) return;
-    // Fetch latest data for this symbol
     const latest = await fetchETF(symbol);
     setGroupedEtfsState(prev => {
       if (!prev) return prev;
@@ -145,7 +122,6 @@ function App() {
     });
   };
 
-  // Determine which ETFs to display based on category
   const displayContent = () => {
     if (selectedStructuredCategory) {
       if (structuredCategoryLoading) {
@@ -196,20 +172,29 @@ function App() {
           price={price}
           category={category}
           showOnlyWithData={showOnlyWithData}
-          showOtherEtfs={false} // Don't show other ETFs when a specific category is selected
+          showOtherEtfs={false}
         />
       );
     }
   };
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/ETFStats" element={<HomePage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="dashboard">
+      <Header />
+      <Filters
+        category={selectedStructuredCategory ? `structured-${selectedStructuredCategory}` : category}
+        onCategoryChange={handleCategoryChange}
+        recommendation={recommendation}
+        setRecommendation={setRecommendation}
+        price={price}
+        setPrice={setPrice}
+        showOnlyWithData={showOnlyWithData}
+        setShowOnlyWithData={setShowOnlyWithData}
+        categoryOptions={categoryOptions}
+      />
+      {displayContent()}
+    </div>
   );
 }
 
-export default App;
+export default DashboardPage; 
