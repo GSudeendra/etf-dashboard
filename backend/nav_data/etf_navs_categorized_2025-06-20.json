@@ -20,37 +20,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Groww Nifty 500 Momentum 50 ETF FOF - Direct Plan - IDCW",
-                    "amfiCode": "153454",
-                    "latestNav": "10.6744",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty 500 Momentum 50 ETF FOF - Regular Plan - IDCW",
-                    "amfiCode": "153455",
-                    "latestNav": "10.6552",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty 500 Momentum 50 ETF FOF - Regular Plan- Growth",
-                    "amfiCode": "153456",
-                    "latestNav": "10.6552",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Quantum Nifty 50 ETF Fund of Fund - Direct Plan - Growth",
                     "amfiCode": "150390",
                     "latestNav": "14.5919",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Quantum Nifty 50 ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "150389",
-                    "latestNav": "14.5416",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -232,8 +204,8 @@
                     "symbol": "",
                     "schemeName": "Quantum Nifty 50 ETF",
                     "amfiCode": "108479",
-                    "latestNav": "2691.3407",
-                    "navDate": "19-Jun-2025"
+                    "latestNav": "2725.9410",
+                    "navDate": "20-Jun-2025"
                 },
                 {
                     "symbol": "",
@@ -472,22 +444,8 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "ICICI Prudential Nifty 100 Low Volatility 30 ETF FOF - Direct Plan - IDCW",
-                    "amfiCode": "148823",
-                    "latestNav": "17.9745",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "ICICI Prudential Nifty 100 Low Volatility 30 ETF FOF - Growth",
                     "amfiCode": "148821",
-                    "latestNav": "17.6443",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "ICICI Prudential Nifty 100 Low Volatility 30 ETF FOF - IDCW",
-                    "amfiCode": "148824",
                     "latestNav": "17.6443",
                     "navDate": "19-Jun-2025"
                 },
@@ -558,8 +516,8 @@
                     "symbol": "",
                     "schemeName": "Zerodha Nifty 100 ETF",
                     "amfiCode": "152667",
-                    "latestNav": "10.4909",
-                    "navDate": "19-Jun-2025"
+                    "latestNav": "10.627",
+                    "navDate": "20-Jun-2025"
                 }
             ]
         },
@@ -654,8 +612,8 @@
                     "symbol": "",
                     "schemeName": "Zerodha Nifty Midcap 150 ETF",
                     "amfiCode": "152668",
-                    "latestNav": "10.4379",
-                    "navDate": "19-Jun-2025"
+                    "latestNav": "10.5692",
+                    "navDate": "20-Jun-2025"
                 }
             ]
         },
@@ -677,51 +635,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Mirae Asset Nifty MidSmallcap400 Momentum Quality 100 ETF Fund of Fund - Direct Plan - IDCW",
-                    "amfiCode": "152646",
-                    "latestNav": "9.956",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty MidSmallcap400 Momentum Quality 100 ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "152647",
-                    "latestNav": "9.900",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty MidSmallcap400 Momentum Quality 100 ETF Fund of Fund - Regular Plan - IDCW",
-                    "amfiCode": "152648",
-                    "latestNav": "9.905",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF Fund of Fund - Direct Plan - Growth",
                     "amfiCode": "152459",
                     "latestNav": "10.267",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF Fund of Fund - Direct Plan - IDCW",
-                    "amfiCode": "152456",
-                    "latestNav": "10.267",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "152457",
-                    "latestNav": "10.202",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty Smallcap 250 Momentum Quality 100 ETF Fund of Fund - Regular Plan - IDCW",
-                    "amfiCode": "152458",
-                    "latestNav": "10.205",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -774,51 +690,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life Silver ETF FOF-Direct IDCW",
-                    "amfiCode": "149781",
-                    "latestNav": "17.1109",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life Silver ETF FOF-Regular Growth",
-                    "amfiCode": "149783",
-                    "latestNav": "16.8384",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life Silver ETF FOF-Regular IDCW",
-                    "amfiCode": "149784",
-                    "latestNav": "16.8361",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Axis Equity ETFs FOF - Direct Plan - Growth Option",
                     "amfiCode": "149847",
                     "latestNav": "14.8778",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Axis Equity ETFs FOF - Direct Plan - IDCW",
-                    "amfiCode": "149846",
-                    "latestNav": "14.8775",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Axis Equity ETFs FOF - Regular Plan - Growth Option",
-                    "amfiCode": "149844",
-                    "latestNav": "14.7551",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Axis Equity ETFs FOF - Regular Plan - IDCW",
-                    "amfiCode": "149845",
-                    "latestNav": "14.7551",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -830,30 +704,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "ICICI Prudential Nifty Alpha Low - Volatility 30 ETF FOF - Direct Plan - IDCW",
-                    "amfiCode": "149160",
-                    "latestNav": "14.9669",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "ICICI Prudential Nifty Alpha Low - Volatility 30 ETF FOF - Growth",
                     "amfiCode": "149157",
                     "latestNav": "14.7104",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "ICICI Prudential Nifty Alpha Low - Volatility 30 ETF FOF - IDCW",
-                    "amfiCode": "149159",
-                    "latestNav": "14.7103",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Hang Seng TECH ETF Fund of Fund Regular Plan - Growth Option",
-                    "amfiCode": "149380",
-                    "latestNav": "11.114",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -865,58 +718,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "SBI Silver ETF FOF- Regular Plan - Income Distribution Cum Capital Withdrawal Option (IDCW)",
-                    "amfiCode": "152734",
-                    "latestNav": "11.5325",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "SBI Silver ETF Fund of Fund- Direct Plan - Income Distribution Cum Capital Withdrawal Option (IDCW)",
-                    "amfiCode": "152736",
-                    "latestNav": "11.5729",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Nifty India Digital ETF Fund of Fund -Regular Plan-Growth",
-                    "amfiCode": "150345",
-                    "latestNav": "14.2168",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Nifty India Digital ETF Fund of Fund-Direct Plan- IDCW Reinvestment",
-                    "amfiCode": "150341",
-                    "latestNav": "14.4271",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Tata Nifty India Digital ETF Fund of Fund-Direct Plan-Growth",
                     "amfiCode": "150344",
                     "latestNav": "14.4271",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Nifty India Digital ETF Fund of Fund-Direct Plan-IDCW Payout",
-                    "amfiCode": "150340",
-                    "latestNav": "14.4271",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Nifty India Digital ETF Fund of Fund-Regular Plan-IDCW Payout",
-                    "amfiCode": "150342",
-                    "latestNav": "14.2168",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Nifty India Digital ETF Fund of Fund-Regular Plan-IDCW Reinvestment",
-                    "amfiCode": "150343",
-                    "latestNav": "14.2168",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -928,27 +732,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Direct IDCW Payout",
-                    "amfiCode": "152139",
-                    "latestNav": "11.2963",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Regular Growth",
-                    "amfiCode": "152142",
-                    "latestNav": "11.2857",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life US Treasury 1-3 Year Bond ETFs Fund Of Funds-Regular IDCW",
-                    "amfiCode": "152144",
-                    "latestNav": "11.2846",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Direct Growth",
                     "amfiCode": "152150",
                     "latestNav": "11.5181",
@@ -956,37 +739,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Direct IDCW",
-                    "amfiCode": "152145",
-                    "latestNav": "11.5181",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Regular Growth",
-                    "amfiCode": "152147",
-                    "latestNav": "11.5067",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life US Treasury 3-10 Year Bond ETFs Fund Of Funds-Regular IDCW",
-                    "amfiCode": "152149",
-                    "latestNav": "11.5067",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Mirae Asset Global X Artificial Intelligence & Technology ETF Fund of Fund - Direct Plan- Growth",
                     "amfiCode": "150597",
                     "latestNav": "21.266",
-                    "navDate": "18-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Global X Artificial Intelligence & Technology ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "150596",
-                    "latestNav": "21.166",
                     "navDate": "18-Jun-2025"
                 },
                 {
@@ -1015,13 +770,6 @@
                     "schemeName": "ADITYA BIRLA SUN LIFE CRISIL BROAD BASED GILT ETF",
                     "amfiCode": "152732",
                     "latestNav": "109.5865",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Aditya Birla Sun Life CRISIL Liquid Overnight ETF - IDCW Daily Reinvestment with Weekly Payout",
-                    "amfiCode": "151533",
-                    "latestNav": "1000.",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1376,27 +1124,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "DSP Gold ETF Fund of Fund - Direct - IDCW",
-                    "amfiCode": "152184",
-                    "latestNav": "15.7817",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "DSP Gold ETF Fund of Fund - Regular - Growth",
-                    "amfiCode": "152182",
-                    "latestNav": "15.6879",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "DSP Gold ETF Fund of Fund - Regular - IDCW",
-                    "amfiCode": "152181",
-                    "latestNav": "15.6879",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Edelweiss Gold and Silver ETF FOF - Direct Plan - Growth",
                     "amfiCode": "150581",
                     "latestNav": "18.753",
@@ -1404,51 +1131,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Edelweiss Gold and Silver ETF FOF - Direct Plan - IDCW",
-                    "amfiCode": "150578",
-                    "latestNav": "18.753",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Edelweiss Gold and Silver ETF FOF - Regular Plan - Growth",
-                    "amfiCode": "150579",
-                    "latestNav": "18.542",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Edelweiss Gold and Silver ETF FOF - Regular Plan - IDCW",
-                    "amfiCode": "150580",
-                    "latestNav": "18.542",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Groww Gold ETF FOF - DIRECT - GROWTH",
                     "amfiCode": "152980",
                     "latestNav": "12.4039",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Gold ETF FOF - DIRECT - IDCW",
-                    "amfiCode": "153004",
-                    "latestNav": "12.4039",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Gold ETF FOF - REGULAR - GROWTH",
-                    "amfiCode": "153006",
-                    "latestNav": "12.3792",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Gold ETF FOF - REGULAR - IDCW",
-                    "amfiCode": "153005",
-                    "latestNav": "12.3793",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1467,13 +1152,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Invesco India Gold ETF Fund of Fund - Direct Plan - IDCW (Payout / Reinvestment)",
-                    "amfiCode": "120530",
-                    "latestNav": "29.1512",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Invesco India Gold ETF Fund of Fund - Direct Plan- - Growth",
                     "amfiCode": "120531",
                     "latestNav": "29.1959",
@@ -1488,23 +1166,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Invesco India Gold ETF Fund of Fund - IDCW (Payout / Reinvestment)",
-                    "amfiCode": "116075",
-                    "latestNav": "28.145",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "LIC MF Gold ETF Fund of Fund-Direct Plan-Growth",
                     "amfiCode": "151974",
                     "latestNav": "27.322",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "LIC MF Gold ETF Fund of Fund-Regular Plan-Growth",
-                    "amfiCode": "151973",
-                    "latestNav": "25.9237",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1516,37 +1180,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Mirae Asset Gold ETF Fund of Fund - Direct Plan - IDCW",
-                    "amfiCode": "153008",
-                    "latestNav": "12.643",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Gold ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "153009",
-                    "latestNav": "12.609",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Gold ETF Fund of Fund - Regular Plan - IDCW",
-                    "amfiCode": "153010",
-                    "latestNav": "12.600",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Motilal Oswal Gold and Silver ETFs Fund of Funds(Direct Plan)",
                     "amfiCode": "150642",
                     "latestNav": "18.6269",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Motilal Oswal Gold and Silver ETFs Fund of Funds(Regular Plan)",
-                    "amfiCode": "150641",
-                    "latestNav": "18.4474",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1558,65 +1194,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Tata Gold ETF Fund of Fund Direct Plan IDCW Payout Option",
-                    "amfiCode": "152288",
-                    "latestNav": "15.5170",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Gold ETF Fund of Fund Direct Plan IDCW Reinvestment Option",
-                    "amfiCode": "152289",
-                    "latestNav": "15.5170",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Gold ETF Fund of Fund Regular Plan Growth Option",
-                    "amfiCode": "152290",
-                    "latestNav": "15.3843",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Gold ETF Fund of Fund Regular Plan IDCW Payout Option",
-                    "amfiCode": "152286",
-                    "latestNav": "15.3843",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Gold ETF Fund of Fund Regular Plan IDCW Reinvestment Option",
-                    "amfiCode": "152291",
-                    "latestNav": "15.3843",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Union Gold ETF Fund of Fund - Direct Plan - Growth Option",
                     "amfiCode": "153340",
                     "latestNav": "11.5349",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Union Gold ETF Fund of Fund - Direct Plan - IDCW Option",
-                    "amfiCode": "153339",
-                    "latestNav": "11.5349",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Union Gold ETF Fund of Fund - Regular Plan - Growth Option",
-                    "amfiCode": "153338",
-                    "latestNav": "11.5255",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Union Gold ETF Fund of Fund - Regular Plan - IDCW Option",
-                    "amfiCode": "153341",
-                    "latestNav": "11.5255",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1628,17 +1208,10 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "UTI Gold ETF Fund of Fund - Regular Plan - Growth Opton",
-                    "amfiCode": "150715",
-                    "latestNav": "18.9717",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Zerodha Gold ETF FoF-Direct Plan - Growth Option",
                     "amfiCode": "153011",
-                    "latestNav": "13.0711",
-                    "navDate": "19-Jun-2025"
+                    "latestNav": "13.0044",
+                    "navDate": "20-Jun-2025"
                 },
                 {
                     "symbol": "",
@@ -1763,8 +1336,8 @@
                     "symbol": "",
                     "schemeName": "Zerodha Gold ETF",
                     "amfiCode": "152476",
-                    "latestNav": "15.6829",
-                    "navDate": "19-Jun-2025"
+                    "latestNav": "15.5927",
+                    "navDate": "20-Jun-2025"
                 }
             ]
         },
@@ -1786,51 +1359,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "DSP Silver ETF Fund of Fund - Direct - IDCW",
-                    "amfiCode": "153489",
-                    "latestNav": "11.3865",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "DSP Silver ETF Fund of Fund - Regular - Growth",
-                    "amfiCode": "153486",
-                    "latestNav": "11.3815",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "DSP Silver ETF Fund of Fund - Regular - IDCW",
-                    "amfiCode": "153488",
-                    "latestNav": "11.3815",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Groww Silver ETF FOF - Direct - Growth",
                     "amfiCode": "153525",
                     "latestNav": "10.8558",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Silver ETF FOF - Direct - IDCW",
-                    "amfiCode": "153526",
-                    "latestNav": "10.8558",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Silver ETF FOF - Regular - Growth",
-                    "amfiCode": "153527",
-                    "latestNav": "10.8521",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Silver ETF FOF - Regular - IDCW",
-                    "amfiCode": "153528",
-                    "latestNav": "10.8521",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1856,23 +1387,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "ICICI PRUDENTIAL SILVER ETF FUND OF FUND - Direct Plan - IDCW",
-                    "amfiCode": "149776",
-                    "latestNav": "16.8599",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "ICICI PRUDENTIAL SILVER ETF FUND OF FUND - Growth",
                     "amfiCode": "149777",
                     "latestNav": "16.5790",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "ICICI PRUDENTIAL SILVER ETF FUND OF FUND - IDCW",
-                    "amfiCode": "149778",
-                    "latestNav": "16.5788",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1884,37 +1401,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Kotak Silver ETF Fund of Fund - Regular Plan - Growth Option",
-                    "amfiCode": "151602",
-                    "latestNav": "14.4421",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Nippon India Silver ETF FOF- Direct Plan-Growth Option",
                     "amfiCode": "149760",
                     "latestNav": "16.7783",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Nippon India Silver ETF FOF- Direct Plan-IDCW Option",
-                    "amfiCode": "149762",
-                    "latestNav": "16.7783",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Nippon India Silver ETF FOF- Regular Plan-IDCW Option",
-                    "amfiCode": "149761",
-                    "latestNav": "16.5557",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Nippon India Silver ETF FOF-Regular Plan- Growth Option",
-                    "amfiCode": "149759",
-                    "latestNav": "16.5557",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -1926,13 +1415,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "SBI Silver ETF Fund of Fund- Regular Plan - Growth",
-                    "amfiCode": "152733",
-                    "latestNav": "11.5328",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Tata Silver ETF Fund of Fund Direct Plan Growth Option",
                     "amfiCode": "152293",
                     "latestNav": "14.6732",
@@ -1940,51 +1422,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Tata Silver ETF Fund of Fund Direct Plan IDCW Payout Option",
-                    "amfiCode": "152294",
-                    "latestNav": "14.6732",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Silver ETF Fund of Fund Direct Plan IDCW Reinvestment Option",
-                    "amfiCode": "152295",
-                    "latestNav": "14.6732",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Silver ETF Fund of Fund Regular Plan Growth Option",
-                    "amfiCode": "152297",
-                    "latestNav": "14.5737",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Silver ETF Fund of Fund Regular Plan IDCW Payout Option",
-                    "amfiCode": "152296",
-                    "latestNav": "14.5737",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Tata Silver ETF Fund of Fund Regular Plan IDCW Reinvestment Option",
-                    "amfiCode": "152292",
-                    "latestNav": "14.5737",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "UTI Silver ETF Fund of Fund - Direct Plan - Growth Option",
                     "amfiCode": "151731",
                     "latestNav": "14.044",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "UTI Silver ETF Fund of Fund - Regular Plan - Growth Option",
-                    "amfiCode": "151732",
-                    "latestNav": "13.9311",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -2082,8 +1522,8 @@
                     "symbol": "",
                     "schemeName": "Zerodha Silver ETF",
                     "amfiCode": "153413",
-                    "latestNav": "11.0075",
-                    "navDate": "19-Jun-2025"
+                    "latestNav": "10.9323",
+                    "navDate": "20-Jun-2025"
                 }
             ]
         },
@@ -2105,22 +1545,8 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "NIPPON INDIA NIFTY NEXT 50 JUNIOR BEES FOF - DIRECT Plan - IDCW Option",
-                    "amfiCode": "146515",
-                    "latestNav": "24.6749",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Nippon India Nifty Next 50 Junior BeES FoF - Growth Plan - Growth Option",
                     "amfiCode": "146514",
-                    "latestNav": "24.3099",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "NIPPON INDIA NIFTY NEXT 50 JUNIOR BEES FOF - IDCW Option",
-                    "amfiCode": "146512",
                     "latestNav": "24.3099",
                     "navDate": "19-Jun-2025"
                 },
@@ -2235,13 +1661,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "ICICI Prudential BSE Liquid Rate ETF - IDCW",
-                    "amfiCode": "144947",
-                    "latestNav": "1000.0000",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Kotak Nifty 1D Rate Liquid ETF",
                     "amfiCode": "151358",
                     "latestNav": "1055.4814",
@@ -2256,20 +1675,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Mirae Asset Nifty 1D Rate Liquid ETF-IDCW",
-                    "amfiCode": "151908",
-                    "latestNav": "1000.0000",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Nippon India ETF Nifty 1D Rate Liquid BeES - DAILY IDCW Option",
-                    "amfiCode": "140086",
-                    "latestNav": "1000.0000",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Shriram Nifty 1D Rate Liquid ETF - Growth",
                     "amfiCode": "152741",
                     "latestNav": "1057.9057",
@@ -2279,8 +1684,8 @@
                     "symbol": "",
                     "schemeName": "Zerodha Nifty 1D Rate Liquid ETF - Growth Option",
                     "amfiCode": "152327",
-                    "latestNav": "109.097",
-                    "navDate": "19-Jun-2025"
+                    "latestNav": "109.1119",
+                    "navDate": "20-Jun-2025"
                 }
             ]
         },
@@ -2300,13 +1705,6 @@
                     "schemeName": "Invesco India - Invesco EQQQ Nasdaq-100 ETF Fund of Fund - Direct Plan - Growth",
                     "amfiCode": "149961",
                     "latestNav": "17.681",
-                    "navDate": "18-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Invesco India - Invesco EQQQ Nasdaq-100 ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "149960",
-                    "latestNav": "17.546",
                     "navDate": "18-Jun-2025"
                 },
                 {
@@ -2339,27 +1737,6 @@
                     "schemeName": "Mirae Asset Nifty India New Age Consumption ETF Fund of Fund - Direct Plan - Growth",
                     "amfiCode": "153192",
                     "latestNav": "9.379",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty India New Age Consumption ETF Fund of Fund - Direct Plan - IDCW",
-                    "amfiCode": "153193",
-                    "latestNav": "9.379",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty India New Age Consumption ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "153194",
-                    "latestNav": "9.360",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty India New Age Consumption ETF Fund of Fund - Regular Plan - IDCW",
-                    "amfiCode": "153195",
-                    "latestNav": "9.361",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -2597,27 +1974,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Direct Plan - IDCW",
-                    "amfiCode": "153381",
-                    "latestNav": "10.904",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "153382",
-                    "latestNav": "10.888",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset BSE 200 Equal Weight ETF Fund of Fund - Regular Plan - IDCW",
-                    "amfiCode": "153383",
-                    "latestNav": "10.888",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "DSP Nifty Top 10 Equal Weight ETF",
                     "amfiCode": "152812",
                     "latestNav": "98.2593",
@@ -2685,27 +2041,6 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Axis Nifty AAA Bond Plus SDL Apr 2026 50:50 ETF FOF - Regular Plan - Growth Option",
-                    "amfiCode": "149242",
-                    "latestNav": "12.2088",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Axis Nifty AAA Bond Plus SDL Apr 2026 50:50 ETF FOF - Regular Plan - IDCW Option",
-                    "amfiCode": "149245",
-                    "latestNav": "12.2088",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Axis Nifty AAA Bond Plus SDL April 2026 50:50 ETF FOF - Direct Plan - IDCW Option",
-                    "amfiCode": "149244",
-                    "latestNav": "12.2681",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "BHARAT Bond ETF FOF - April 2032 Direct Growth",
                     "amfiCode": "149401",
                     "latestNav": "12.7632",
@@ -2720,43 +2055,8 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "BHARAT Bond ETF FOF - April 2032 Regular Plan Dividend",
-                    "amfiCode": "149400",
-                    "latestNav": "12.7632",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "BHARAT Bond ETF FOF - April 2032 Regular Plan Growth",
-                    "amfiCode": "149399",
-                    "latestNav": "12.7632",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "BHARAT Bond ETF FOF - April 2033 - Direct Plan - Growth",
                     "amfiCode": "150989",
-                    "latestNav": "12.5056",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "BHARAT Bond ETF FOF - April 2033 - Direct Plan - IDCW",
-                    "amfiCode": "150990",
-                    "latestNav": "12.5056",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "BHARAT Bond ETF FOF - April 2033 - Regular Plan - Growth",
-                    "amfiCode": "150991",
-                    "latestNav": "12.5056",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "BHARAT Bond ETF FOF - April 2033 - Regular Plan - IDCW",
-                    "amfiCode": "150988",
                     "latestNav": "12.5056",
                     "navDate": "19-Jun-2025"
                 },
@@ -2769,58 +2069,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Groww Nifty 200 ETF FOF - Direct - IDCW",
-                    "amfiCode": "153343",
-                    "latestNav": "11.4445",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty 200 ETF FOF - Regular - Growth",
-                    "amfiCode": "153342",
-                    "latestNav": "11.4251",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty 200 ETF FOF - Regular - IDCW",
-                    "amfiCode": "153344",
-                    "latestNav": "11.4252",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty EV & New Age Automotive ETF FOF - Direct Plan - IDCW",
-                    "amfiCode": "152771",
-                    "latestNav": "8.8143",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty EV & New Age Automotive ETF FOF - Regular Plan - Growth",
-                    "amfiCode": "152773",
-                    "latestNav": "8.7814",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty EV & New Age Automotive ETF FOF - Regular Plan - IDCW",
-                    "amfiCode": "152772",
-                    "latestNav": "8.7815",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Groww Nifty EV & New Age Automotive ETF FOF- Direct Plan - Growth",
                     "amfiCode": "152770",
                     "latestNav": "8.8139",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty India Defence ETF FOF - Direct - IDCW",
-                    "amfiCode": "152926",
-                    "latestNav": "12.8603",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -2832,30 +2083,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Groww Nifty India Defence ETF FOF - Regular - Growth",
-                    "amfiCode": "152927",
-                    "latestNav": "12.8248",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Groww Nifty India Defence ETF FOF - Regular - IDCW",
-                    "amfiCode": "152928",
-                    "latestNav": "12.8228",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "ICICI Prudential BSE 500 ETF FOF - Direct Plan - Growth",
                     "amfiCode": "149331",
                     "latestNav": "15.5833",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "ICICI Prudential BSE 500 ETF FOF - Direct Plan - IDCW",
-                    "amfiCode": "149333",
-                    "latestNav": "15.5832",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -2867,22 +2097,8 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "ICICI Prudential BSE 500 ETF FOF - IDCW",
-                    "amfiCode": "149332",
-                    "latestNav": "15.3221",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - Direct Plan - Growth",
                     "amfiCode": "153394",
-                    "latestNav": "10.9787",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - Direct Plan - IDCW",
-                    "amfiCode": "153395",
                     "latestNav": "10.9787",
                     "navDate": "19-Jun-2025"
                 },
@@ -2895,37 +2111,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "ICICI Prudential Nifty EV & New Age Automotive ETF FOF - IDCW",
-                    "amfiCode": "153393",
-                    "latestNav": "10.9693",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Mirae Asset BSE Select IPO ETF Fund of Fund - Direct Plan - Growth",
                     "amfiCode": "153385",
                     "latestNav": "11.516",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset BSE Select IPO ETF Fund of Fund - Direct Plan - IDCW",
-                    "amfiCode": "153386",
-                    "latestNav": "11.515",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset BSE Select IPO ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "153387",
-                    "latestNav": "11.516",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset BSE Select IPO ETF Fund of Fund - Regular Plan - IDCW",
-                    "amfiCode": "153388",
-                    "latestNav": "11.498",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -2937,51 +2125,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Mirae Asset Nifty India Manufacturing ETF FOF - Direct Plan- IDCW",
-                    "amfiCode": "149787",
-                    "latestNav": "17.846",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty India Manufacturing ETF FOF - Regular Plan - Growth",
-                    "amfiCode": "149788",
-                    "latestNav": "17.608",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty India Manufacturing ETF FOF - Regular Plan - IDCW",
-                    "amfiCode": "149789",
-                    "latestNav": "17.674",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Mirae Asset Nifty200 Alpha 30 ETF Fund of Fund - Direct Plan - Growth",
                     "amfiCode": "152718",
                     "latestNav": "8.665",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty200 Alpha 30 ETF Fund of Fund - Direct Plan - IDCW",
-                    "amfiCode": "152719",
-                    "latestNav": "8.670",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty200 Alpha 30 ETF Fund of Fund - Regular Plan - Growth",
-                    "amfiCode": "152720",
-                    "latestNav": "8.637",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset Nifty200 Alpha 30 ETF Fund of Fund - Regular Plan - IDCW",
-                    "amfiCode": "152721",
-                    "latestNav": "8.630",
                     "navDate": "19-Jun-2025"
                 },
                 {
@@ -2993,23 +2139,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Mirae Asset NYSE FANG + ETF Fund of Fund Regular Growth",
-                    "amfiCode": "148929",
-                    "latestNav": "28.258",
-                    "navDate": "18-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Mirae Asset S&P 500 Top 50 ETF Fund of Fund Direct Growth",
                     "amfiCode": "149170",
                     "latestNav": "19.483",
-                    "navDate": "18-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Mirae Asset S&P 500 Top 50 ETF Fund of Fund Regular Growth",
-                    "amfiCode": "149171",
-                    "latestNav": "19.186",
                     "navDate": "18-Jun-2025"
                 },
                 {
@@ -3021,37 +2153,9 @@
                 },
                 {
                     "symbol": "",
-                    "schemeName": "Axis US Treasury Dynamic Bond ETF Fund of Fund - Direct Plan - IDCW Option",
-                    "amfiCode": "152241",
-                    "latestNav": "10.8278",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Axis US Treasury Dynamic Bond ETF Fund of Fund - Regular Plan - Growth Option",
-                    "amfiCode": "152239",
-                    "latestNav": "10.8208",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Axis US Treasury Dynamic Bond ETF Fund of Fund - Regular Plan - IDCW Option",
-                    "amfiCode": "152238",
-                    "latestNav": "10.8208",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
                     "schemeName": "Motilal Oswal Developed Market Ex US ETFs Fund of Funds Direct Plan Growth",
                     "amfiCode": "152090",
                     "latestNav": "13.4890",
-                    "navDate": "19-Jun-2025"
-                },
-                {
-                    "symbol": "",
-                    "schemeName": "Motilal Oswal Developed Market Ex US ETFs Fund of Funds Regular Plan Growth",
-                    "amfiCode": "152091",
-                    "latestNav": "13.3950",
                     "navDate": "19-Jun-2025"
                 },
                 {

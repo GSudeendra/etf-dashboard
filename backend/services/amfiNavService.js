@@ -201,9 +201,14 @@ function parseEtfFromRawTxt(rawTxt) {
     });
     // Step 4: Filter only ETFs
     const etfKeywords = ['ETF', 'BEES', 'EXCHANGE TRADED FUND'];
-    const etfs = records.filter(record => {
+    let etfs = records.filter(record => {
       const name = (record['Scheme Name'] || '').toUpperCase();
       return etfKeywords.some(keyword => name.includes(keyword));
+    });
+    // Step 5: Filter out ETFs with 'Regular' or 'IDCW' in the name
+    etfs = etfs.filter(record => {
+      const name = (record['Scheme Name'] || '').toUpperCase();
+      return !name.includes('REGULAR') && !name.includes('IDCW');
     });
     return etfs;
   } catch (err) {
@@ -219,6 +224,8 @@ function categorizeEtfs(etfs, categories) {
 
   for (const etf of etfs) {
     const name = (etf['Scheme Name'] || etf.schemeName || '').toUpperCase();
+    // Filter out ETFs with 'Regular' in the name
+    if (name.includes('REGULAR')) continue;
     let matched = false;
     for (const [catKey, cat] of Object.entries(result)) {
       if (cat.keywords && cat.keywords.some(keyword => name.includes(keyword.toUpperCase()))) {
