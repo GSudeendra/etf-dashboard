@@ -1,35 +1,44 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import '../App.css';
 
 const ETFStatsPage = () => {
   const location = useLocation();
   const etfs = location.state?.etfs && location.state.etfs.length > 0 ? location.state.etfs : [];
 
   return (
-    <div style={{ maxWidth: 900, margin: '40px auto', padding: 24, background: '#fff', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
-      <h2>ETF Stats</h2>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr>
-            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #eee' }}>ETF Symbol</th>
-            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #eee' }}>Scheme Name</th>
-            <th style={{ textAlign: 'right', padding: '8px 4px', borderBottom: '1px solid #eee' }}>Latest NAV</th>
-            <th style={{ textAlign: 'right', padding: '8px 4px', borderBottom: '1px solid #eee' }}>NAV Date</th>
-            <th style={{ textAlign: 'left', padding: '8px 4px', borderBottom: '1px solid #eee' }}>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {etfs.map((etf, idx) => (
-            <tr key={etf.symbol || idx}>
-              <td style={{ padding: '8px 4px', borderBottom: '1px solid #f5f5f5' }}>{etf.symbol}</td>
-              <td style={{ padding: '8px 4px', borderBottom: '1px solid #f5f5f5' }}>{etf.schemeName}</td>
-              <td style={{ textAlign: 'right', padding: '8px 4px', borderBottom: '1px solid #f5f5f5' }}>{etf.latestNav ?? '-'}</td>
-              <td style={{ textAlign: 'right', padding: '8px 4px', borderBottom: '1px solid #f5f5f5' }}>{etf.navDate ?? '-'}</td>
-              <td style={{ padding: '8px 4px', borderBottom: '1px solid #f5f5f5' }}>{etf.category ?? '-'}</td>
+    <div className="etf-stats-container">
+      <div className="etf-stats-heading-wrapper">
+        <h2 className="etf-stats-heading">ETF Stats</h2>
+      </div>
+      <div style={{ overflowX: 'auto' }}>
+        <table className="etf-stats-table">
+          <thead>
+            <tr>
+              <th className="etf-stats-th" style={{ minWidth: 120 }}>ETF Symbol</th>
+              <th className="etf-stats-th" style={{ minWidth: 240 }}>Scheme Name</th>
+              <th className="etf-stats-th" style={{ minWidth: 120 }}>Latest NAV</th>
+              <th className="etf-stats-th" style={{ minWidth: 180 }}>NAV Date</th>
+              <th className="etf-stats-th" style={{ minWidth: 180 }}>Category</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {etfs.map((etf, idx) => (
+              <tr
+                key={etf.amfiCode || etf.symbol || idx}
+                className="etf-stats-row"
+                style={{ background: idx % 2 === 0 ? 'rgba(255, 243, 230, 0.18)' : 'rgba(255,255,255,0.98)' }}
+              >
+                <td className="etf-stats-td etf-stats-symbol">{etf.symbol}</td>
+                <td className="etf-stats-td">{etf.schemeName}</td>
+                <td className="etf-stats-td" style={{ textAlign: 'right' }}>{etf.latestNav ?? '-'}</td>
+                <td className="etf-stats-td" style={{ textAlign: 'center' }}>{etf.navDate ?? '-'}</td>
+                <td className="etf-stats-td" style={{ textAlign: 'center' }}>{etf.category ?? '-'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
