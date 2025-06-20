@@ -141,7 +141,7 @@ etf-dashboard/
 
 ## 📄 License
 
-MIT
+Apache License 2.0
 
 ---
 
