@@ -1,4 +1,4 @@
-const { ensureNavData } = require('../services/navDataService');
+const { ensureNavData } = require('../../services/navDataService');
 
 module.exports = async function (req, res) {
   try {

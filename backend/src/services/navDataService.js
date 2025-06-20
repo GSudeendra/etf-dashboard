@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const { getCategorizedEtfList } = require('./amfiNavService');
 
-const NAV_DATA_DIR = path.join(__dirname, '..', 'nav_data');
+const NAV_DATA_DIR = path.join(__dirname, '..', '..', 'nav_data');
 let navCache = null;
 let navCacheDate = null;
 

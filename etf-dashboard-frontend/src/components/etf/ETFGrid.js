@@ -6,11 +6,11 @@ export default function ETFGrid({ etfs, categoryKey, live }) {
   const filteredEtfs = live
     ? (etfs || [])
     : (etfs || []).filter(etf => etf.latestNav !== undefined && etf.latestNav !== null && etf.latestNav !== '-');
-  const [visibleCount, setVisibleCount] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(8);
 
-  // When categoryKey changes, reset visibleCount to 5
+  // When categoryKey changes, reset visibleCount to 8
   useEffect(() => {
-    setVisibleCount(5);
+    setVisibleCount(8);
   }, [categoryKey]);
 
   // Infinite scroll: load more when user scrolls near bottom (non-live only)
@@ -18,7 +18,7 @@ export default function ETFGrid({ etfs, categoryKey, live }) {
     if (live || !filteredEtfs.length) return;
     const handleScroll = () => {
       if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 100)) {
-        setVisibleCount(v => Math.min(v + 5, filteredEtfs.length));
+        setVisibleCount(v => Math.min(v + 8, filteredEtfs.length));
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -31,7 +31,7 @@ export default function ETFGrid({ etfs, categoryKey, live }) {
     if (visibleCount >= filteredEtfs.length) return;
     if (window.innerHeight >= document.body.offsetHeight) {
       setTimeout(() => {
-        setVisibleCount(v => Math.min(v + 5, filteredEtfs.length));
+        setVisibleCount(v => Math.min(v + 8, filteredEtfs.length));
       }, 0);
     }
   }, [visibleCount, filteredEtfs.length, live]);

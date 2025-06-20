@@ -1,5 +1,5 @@
 // API handler for triggering NAV fetch and save
-const { fetchAndSaveNavData } = require('../services/navDataService');
+const { fetchAndSaveNavData } = require('../../services/navDataService');
 
 module.exports = async function (req, res) {
   try {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import Header from '../layout/Header';
-import ETFGrid from './ETFGrid';
+import Header from '../components/layout/Header';
+import ETFGrid from '../components/etf/ETFGrid';
 import useCategories from '../hooks/useCategories';
 import useEtfsByCategory from '../hooks/useEtfsByCategory';
-import Filters from './Filters';
+import Filters from '../components/etf/Filters';
 import { useNavigate } from 'react-router-dom';
 import { fetchLiveEtfs } from '../api/etfApi';
 

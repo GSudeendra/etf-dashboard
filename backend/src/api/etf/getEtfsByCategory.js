@@ -1,4 +1,4 @@
-const { getEtfsByCategory } = require('../services/navDataService');
+const { getEtfsByCategory } = require('../../services/navDataService');
 
 module.exports = async function (req, res) {
   const categoryKey = req.params.categoryKey;
