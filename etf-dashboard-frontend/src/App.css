@@ -588,3 +588,28 @@ body {
     font-size: 0.98rem;
   }
 }
+
+.live-dot {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 12px;
+  height: 12px;
+  background: #00A884;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 4px rgba(0,168,132,0.2);
+  z-index: 2;
+  animation: live-pulse 1.5s infinite;
+}
+
+@keyframes live-pulse {
+  0% {
+    box-shadow: 0 0 6px 4px rgba(0,168,132,0.2);
+  }
+  50% {
+    box-shadow: 0 0 10px 6px rgba(0,168,132,0.35);
+  }
+  100% {
+    box-shadow: 0 0 6px 4px rgba(0,168,132,0.2);
+  }
+}

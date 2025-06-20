@@ -20,3 +20,10 @@ export async function fetchNavBySchemeId(schemeId) {
   if (!res.ok) throw new Error('Failed to fetch NAV details');
   return await res.json();
 }
+
+// Fetch live ETF data from backend
+export async function fetchLiveEtfs() {
+  const res = await fetch(`${BASE_URL}/api/etfs/live`);
+  if (!res.ok) throw new Error('Failed to fetch live ETF data');
+  return await res.json();
+}

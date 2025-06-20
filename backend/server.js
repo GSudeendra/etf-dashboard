@@ -8,6 +8,7 @@ const fetchNavsHandler = require('./api/fetchNavs');
 const getNavBySchemeIdHandler = require('./api/getNavBySchemeId');
 const getCategoriesHandler = require('./api/getCategories');
 const getEtfsByCategoryHandler = require('./api/getEtfsByCategory');
+const fetchNseEtfsHandler = require('./api/fetchNseEtfs');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -129,6 +130,7 @@ app.get('/api/etfs/categories', getCategoriesHandler);
 app.get('/api/etfs/category/:categoryKey', getEtfsByCategoryHandler);
 app.get('/api/nav', getNavBySchemeIdHandler);
 app.post('/api/fetch-navs', fetchNavsHandler);
+app.get('/api/etfs/live', fetchNseEtfsHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

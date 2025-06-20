@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ETFCard from './ETFCard';
 
-export default function ETFGrid({ etfs, categoryKey }) {
-  // Only show ETFs with valid NAV
-  const filteredEtfs = (etfs || []).filter(etf => etf.latestNav !== undefined && etf.latestNav !== null && etf.latestNav !== '-');
+export default function ETFGrid({ etfs, categoryKey, live }) {
+  // Only show ETFs with valid NAV (for non-live)
+  const filteredEtfs = live
+    ? (etfs || [])
+    : (etfs || []).filter(etf => etf.latestNav !== undefined && etf.latestNav !== null && etf.latestNav !== '-');
   const [visibleCount, setVisibleCount] = useState(5);
 
   // When categoryKey changes, reset visibleCount to 5
@@ -11,9 +13,9 @@ export default function ETFGrid({ etfs, categoryKey }) {
     setVisibleCount(5);
   }, [categoryKey]);
 
-  // Infinite scroll: load more when user scrolls near bottom
+  // Infinite scroll: load more when user scrolls near bottom (non-live only)
   useEffect(() => {
-    if (!filteredEtfs.length) return;
+    if (live || !filteredEtfs.length) return;
     const handleScroll = () => {
       if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 100)) {
         setVisibleCount(v => Math.min(v + 5, filteredEtfs.length));
@@ -21,22 +23,20 @@ export default function ETFGrid({ etfs, categoryKey }) {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [filteredEtfs.length]);
+  }, [filteredEtfs.length, live]);
 
-  // Auto-load more if not scrollable
+  // Auto-load more if not scrollable (non-live only)
   useEffect(() => {
-    if (!filteredEtfs.length) return;
-    // If all visible, do nothing
+    if (live || !filteredEtfs.length) return;
     if (visibleCount >= filteredEtfs.length) return;
-    // If not scrollable, load more
     if (window.innerHeight >= document.body.offsetHeight) {
       setTimeout(() => {
         setVisibleCount(v => Math.min(v + 5, filteredEtfs.length));
       }, 0);
     }
-  }, [visibleCount, filteredEtfs.length]);
+  }, [visibleCount, filteredEtfs.length, live]);
 
-  const visible = filteredEtfs.slice(0, visibleCount);
+  const visible = live ? filteredEtfs : filteredEtfs.slice(0, visibleCount);
 
   return (
     <div>
@@ -44,7 +44,7 @@ export default function ETFGrid({ etfs, categoryKey }) {
       <div className="etf-grid">
         {visible.length > 0 ? (
           visible.map((etf, idx) => (
-            <ETFCard key={etf.amfiCode || etf.symbol || idx} etf={etf} />
+            <ETFCard key={etf.amfiCode || etf.symbol || idx} etf={etf} live={live} />
           ))
         ) : (
           <div className="no-etfs-message">No ETFs found</div>
