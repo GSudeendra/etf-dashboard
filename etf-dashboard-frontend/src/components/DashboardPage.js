@@ -1,228 +1,31 @@
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../layout/Header';
-import Filters from './Filters';
 import ETFGrid from './ETFGrid';
-import { fetchMovingAverages, fetchETF, fetchOtherETFs, fetchETFCategories, fetchETFsByStructuredCategory } from '../api/etfApi';
-import { useETFsByCategory } from '../hooks/useETFs';
+import useCategories from '../hooks/useCategories';
+import useEtfsByCategory from '../hooks/useEtfsByCategory';
+import Filters from './Filters';
 import { useNavigate } from 'react-router-dom';
 
 function DashboardPage() {
-  const [category, setCategory] = useState('');
-  const [recommendation, setRecommendation] = useState('all');
-  const [price, setPrice] = useState('all');
-  const [showOnlyWithData, setShowOnlyWithData] = useState(true);
-  const [otherETFs, setOtherETFs] = useState([]);
-  const [otherETFsLoading, setOtherETFsLoading] = useState(false);
-  const [structuredCategories, setStructuredCategories] = useState({});
-  const [selectedStructuredCategory, setSelectedStructuredCategory] = useState(null);
-  const [structuredCategoryETFs, setStructuredCategoryETFs] = useState([]);
-  const [structuredCategoryLoading, setStructuredCategoryLoading] = useState(false);
-  const { data: groupedEtfs, loading: groupedLoading, error: groupedError } = useETFsByCategory();
-  const [groupedEtfsState, setGroupedEtfsState] = useState(null);
+  const { categories, loading: catLoading, error: catError } = useCategories();
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const { etfs, loading: etfLoading, error: etfError } = useEtfsByCategory(selectedCategory);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchETFCategories()
-      .then(categories => {
-        setStructuredCategories(categories);
-        const firstCategory = Object.keys(categories)[0];
-        if (firstCategory) {
-          setSelectedStructuredCategory(firstCategory);
-          setStructuredCategoryLoading(true);
-          fetchETFsByStructuredCategory(firstCategory)
-            .then(data => {
-              setStructuredCategoryETFs(data);
-            })
-            .catch(error => {
-              console.error(`Failed to fetch ETFs for category ${firstCategory}:`, error);
-              setStructuredCategoryETFs([]);
-            })
-            .finally(() => {
-              setStructuredCategoryLoading(false);
-            });
-        }
-      })
-      .catch(error => {
-        console.error("Failed to fetch ETF categories:", error);
-      });
-  }, []);
+    if (categories.length > 0) setSelectedCategory(categories[0].key);
+  }, [categories]);
 
-  const categoryOptions = useMemo(() => {
-    const structuredOptions = Object.entries(structuredCategories).map(([key, category]) => ({
-      value: `structured-${key}`,
-      label: category.label,
-      description: category.description,
-      isStructured: true
-    }));
-    return [...structuredOptions, { value: 'others', label: 'Others' }];
-  }, [structuredCategories]);
-
-  useEffect(() => {
-    if (groupedEtfs && !groupedLoading) {
-      setGroupedEtfsState(groupedEtfs);
-    }
-  }, [groupedEtfs, groupedLoading]);
-
-  const handleCategoryChange = (categoryValue) => {
-    if (categoryValue.startsWith('structured-')) {
-      const categoryKey = categoryValue.replace('structured-', '');
-      setSelectedStructuredCategory(categoryKey);
-      setCategory('');
-      setStructuredCategoryLoading(true);
-      fetchETFsByStructuredCategory(categoryKey)
-        .then(data => {
-          setStructuredCategoryETFs(data);
-        })
-        .catch(error => {
-          console.error(`Failed to fetch ETFs for category ${categoryKey}:`, error);
-          setStructuredCategoryETFs([]);
-        })
-        .finally(() => {
-          setStructuredCategoryLoading(false);
-        });
-    } else {
-      setCategory(categoryValue);
-      setSelectedStructuredCategory(null);
-    }
+  const handleStatsClick = () => {
+    // Flatten all funds for stats page
+    const allEtfs = etfs
+      ? etfs.map(fund => ({
+          ...fund,
+          category: selectedCategory
+        }))
+      : [];
+    navigate('/ETFStats', { state: { etfs: allEtfs } });
   };
-
-  useEffect(() => {
-    if (category === 'others') {
-      setOtherETFsLoading(true);
-      fetchOtherETFs()
-        .then(data => {
-          setOtherETFs(data);
-        })
-        .catch(error => {
-          console.error("Failed to fetch other ETFs:", error);
-          setOtherETFs([]);
-        })
-        .finally(() => {
-          setOtherETFsLoading(false);
-        });
-    }
-  }, [category]);
-
-  const handleFetchMA = useCallback(async (symbol) => {
-    return await fetchMovingAverages(symbol);
-  }, []);
-
-  const handleRetry = async (symbol) => {
-    if (!groupedEtfsState) return;
-    let foundCategory = null;
-    Object.entries(groupedEtfsState).forEach(([cat, etfs]) => {
-      if (etfs.some(e => e.symbol === symbol)) foundCategory = cat;
-    });
-    if (!foundCategory) return;
-    const latest = await fetchETF(symbol);
-    setGroupedEtfsState(prev => {
-      if (!prev) return prev;
-      return {
-        ...prev,
-        [foundCategory]: prev[foundCategory].map(e => e.symbol === symbol ? latest : e)
-      };
-    });
-  };
-
-  const displayContent = () => {
-    if (selectedStructuredCategory) {
-      if (structuredCategoryLoading) {
-        return <div style={{textAlign:'center',padding:40}}>Loading {structuredCategories[selectedStructuredCategory]?.label || 'Category'} ETFs...</div>;
-      } else {
-        return (
-          <ETFGrid
-            etfs={structuredCategoryETFs}
-            loadingMap={{}}
-            onFetchMA={handleFetchMA}
-            onRetry={handleRetry}
-            recommendation={recommendation}
-            price={price}
-            showOnlyWithData={showOnlyWithData}
-            categoryTitle={structuredCategories[selectedStructuredCategory]?.label}
-            categoryDescription={structuredCategories[selectedStructuredCategory]?.description}
-          />
-        );
-      }
-    } else if (category === 'others') {
-      if (otherETFsLoading) {
-        return <div style={{textAlign:'center',padding:40}}>Loading Other ETFs...</div>;
-      } else {
-        return (
-          <ETFGrid
-            etfs={otherETFs}
-            loadingMap={{}}
-            onFetchMA={handleFetchMA}
-            onRetry={handleRetry}
-            recommendation={recommendation}
-            price={price}
-            showOnlyWithData={showOnlyWithData}
-          />
-        );
-      }
-    } else if (groupedLoading) {
-      return <div style={{textAlign:'center',padding:40}}>Loading ETFs...</div>;
-    } else if (groupedError) {
-      return <div style={{color:'red',textAlign:'center',padding:40}}>{groupedError}</div>;
-    } else {
-      return (
-        <ETFGrid
-          grouped={groupedEtfsState || groupedEtfs}
-          loadingMap={{}}
-          onFetchMA={handleFetchMA}
-          onRetry={handleRetry}
-          recommendation={recommendation}
-          price={price}
-          category={category}
-          showOnlyWithData={showOnlyWithData}
-          showOtherEtfs={false}
-        />
-      );
-    }
-  };
-
-  // Filtering and sorting logic (copied from ETFGrid)
-  const sortEtfs = (etfs) => {
-    return [...etfs].sort((a, b) => {
-      const aHasData = a.currentPrice !== 'N/A' && a.currentPrice !== '-' && a.currentPrice !== undefined;
-      const bHasData = b.currentPrice !== 'N/A' && b.currentPrice !== '-' && b.currentPrice !== undefined;
-      if (aHasData && !bHasData) return -1;
-      if (!aHasData && bHasData) return 1;
-      if (aHasData && bHasData) {
-        const aLiquidity = typeof a.liquidity === 'number' ? a.liquidity : 0;
-        const bLiquidity = typeof b.liquidity === 'number' ? b.liquidity : 0;
-        if (aLiquidity !== bLiquidity) return bLiquidity - aLiquidity;
-      }
-      return a.symbol.localeCompare(b.symbol);
-    });
-  };
-
-  const filterEtfs = (etfs) => etfs.filter(etf => {
-    if (showOnlyWithData && (etf.currentPrice === 'N/A' || etf.currentPrice === '-' || etf.currentPrice === undefined)) {
-      return false;
-    }
-    const recommendationMatch = recommendation === 'all' || etf.recommendation === recommendation;
-    let priceMatch = true;
-    if (typeof etf.currentPrice === 'number') {
-      if (price === 'under-100') priceMatch = etf.currentPrice < 100;
-      else if (price === '100-500') priceMatch = etf.currentPrice >= 100 && etf.currentPrice <= 500;
-      else if (price === 'above-500') priceMatch = etf.currentPrice > 500;
-    }
-    return recommendationMatch && priceMatch;
-  });
-
-  // Get the currently displayed ETF data
-  let displayedEtfs = [];
-  if (selectedStructuredCategory && structuredCategoryETFs) {
-    displayedEtfs = sortEtfs(filterEtfs(structuredCategoryETFs));
-  } else if (category === 'others' && otherETFs) {
-    displayedEtfs = sortEtfs(filterEtfs(otherETFs));
-  } else if (groupedEtfsState || groupedEtfs) {
-    // Flatten grouped ETFs if present
-    const grouped = groupedEtfsState || groupedEtfs;
-    let allEtfs = [];
-    Object.values(grouped).forEach(arr => { allEtfs = allEtfs.concat(arr); });
-    displayedEtfs = sortEtfs(filterEtfs(allEtfs));
-  }
 
   return (
     <div className="dashboard">
@@ -230,23 +33,27 @@ function DashboardPage() {
       <div style={{ display: 'flex', justifyContent: 'center', margin: '24px 0' }}>
         <button
           style={{ padding: '12px 28px', fontSize: '1rem', borderRadius: 8, border: 'none', background: 'linear-gradient(90deg, #FF6B35 0%, #FFD23F 100%)', color: '#222', fontWeight: 700, cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
-          onClick={() => navigate('/ETFStats', { state: { etfs: displayedEtfs } })}
+          onClick={handleStatsClick}
         >
           ETF Stats
         </button>
       </div>
-      <Filters
-        category={selectedStructuredCategory ? `structured-${selectedStructuredCategory}` : category}
-        onCategoryChange={handleCategoryChange}
-        recommendation={recommendation}
-        setRecommendation={setRecommendation}
-        price={price}
-        setPrice={setPrice}
-        showOnlyWithData={showOnlyWithData}
-        setShowOnlyWithData={setShowOnlyWithData}
-        categoryOptions={categoryOptions}
-      />
-      {displayContent()}
+      <div style={{ marginBottom: 24 }}>
+        <Filters
+          category={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+          categoryOptions={categories.map(cat => ({ value: cat.key, label: cat.label }))}
+        />
+      </div>
+      {catLoading || etfLoading ? (
+        <div style={{ textAlign: 'center', padding: 40 }}>Loading...</div>
+      ) : catError ? (
+        <div style={{ color: 'red', textAlign: 'center', padding: 40 }}>{catError.message || String(catError)}</div>
+      ) : etfError ? (
+        <div style={{ color: 'red', textAlign: 'center', padding: 40 }}>{etfError.message || String(etfError)}</div>
+      ) : (
+        <ETFGrid etfs={etfs} />
+      )}
     </div>
   );
 }

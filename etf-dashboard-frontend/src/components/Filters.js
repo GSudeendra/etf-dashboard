@@ -1,5 +1,4 @@
 import React from 'react';
-import { RECOMMENDATIONS, PRICE_FILTERS } from '../constants';
 
 export default function Filters({
   category, recommendation, price,
