@@ -6,7 +6,7 @@ import Header from './layout/Header';
 import { fetchMovingAverages, fetchETF, fetchOtherETFs, fetchETFCategories, fetchETFsByStructuredCategory } from './api/etfApi';
 import { useETFsByCategory } from './hooks/useETFs';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage';
+import ETFStatsPage from './pages/ETFStatsPage';
 import DashboardPage from './components/DashboardPage';
 
 function App() {
@@ -205,7 +205,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/ETFStats" element={<HomePage />} />
+        <Route path="/" element={<DashboardPage />} />
+        <Route path="/ETFStats" element={<ETFStatsPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
     </BrowserRouter>

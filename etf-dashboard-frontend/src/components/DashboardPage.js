@@ -4,6 +4,7 @@ import Filters from './Filters';
 import ETFGrid from './ETFGrid';
 import { fetchMovingAverages, fetchETF, fetchOtherETFs, fetchETFCategories, fetchETFsByStructuredCategory } from '../api/etfApi';
 import { useETFsByCategory } from '../hooks/useETFs';
+import { useNavigate } from 'react-router-dom';
 
 function DashboardPage() {
   const [category, setCategory] = useState('');
@@ -18,6 +19,7 @@ function DashboardPage() {
   const [structuredCategoryLoading, setStructuredCategoryLoading] = useState(false);
   const { data: groupedEtfs, loading: groupedLoading, error: groupedError } = useETFsByCategory();
   const [groupedEtfsState, setGroupedEtfsState] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchETFCategories()
@@ -178,9 +180,61 @@ function DashboardPage() {
     }
   };
 
+  // Filtering and sorting logic (copied from ETFGrid)
+  const sortEtfs = (etfs) => {
+    return [...etfs].sort((a, b) => {
+      const aHasData = a.currentPrice !== 'N/A' && a.currentPrice !== '-' && a.currentPrice !== undefined;
+      const bHasData = b.currentPrice !== 'N/A' && b.currentPrice !== '-' && b.currentPrice !== undefined;
+      if (aHasData && !bHasData) return -1;
+      if (!aHasData && bHasData) return 1;
+      if (aHasData && bHasData) {
+        const aLiquidity = typeof a.liquidity === 'number' ? a.liquidity : 0;
+        const bLiquidity = typeof b.liquidity === 'number' ? b.liquidity : 0;
+        if (aLiquidity !== bLiquidity) return bLiquidity - aLiquidity;
+      }
+      return a.symbol.localeCompare(b.symbol);
+    });
+  };
+
+  const filterEtfs = (etfs) => etfs.filter(etf => {
+    if (showOnlyWithData && (etf.currentPrice === 'N/A' || etf.currentPrice === '-' || etf.currentPrice === undefined)) {
+      return false;
+    }
+    const recommendationMatch = recommendation === 'all' || etf.recommendation === recommendation;
+    let priceMatch = true;
+    if (typeof etf.currentPrice === 'number') {
+      if (price === 'under-100') priceMatch = etf.currentPrice < 100;
+      else if (price === '100-500') priceMatch = etf.currentPrice >= 100 && etf.currentPrice <= 500;
+      else if (price === 'above-500') priceMatch = etf.currentPrice > 500;
+    }
+    return recommendationMatch && priceMatch;
+  });
+
+  // Get the currently displayed ETF data
+  let displayedEtfs = [];
+  if (selectedStructuredCategory && structuredCategoryETFs) {
+    displayedEtfs = sortEtfs(filterEtfs(structuredCategoryETFs));
+  } else if (category === 'others' && otherETFs) {
+    displayedEtfs = sortEtfs(filterEtfs(otherETFs));
+  } else if (groupedEtfsState || groupedEtfs) {
+    // Flatten grouped ETFs if present
+    const grouped = groupedEtfsState || groupedEtfs;
+    let allEtfs = [];
+    Object.values(grouped).forEach(arr => { allEtfs = allEtfs.concat(arr); });
+    displayedEtfs = sortEtfs(filterEtfs(allEtfs));
+  }
+
   return (
     <div className="dashboard">
       <Header />
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '24px 0' }}>
+        <button
+          style={{ padding: '12px 28px', fontSize: '1rem', borderRadius: 8, border: 'none', background: 'linear-gradient(90deg, #FF6B35 0%, #FFD23F 100%)', color: '#222', fontWeight: 700, cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
+          onClick={() => navigate('/ETFStats', { state: { etfs: displayedEtfs } })}
+        >
+          ETF Stats
+        </button>
+      </div>
       <Filters
         category={selectedStructuredCategory ? `structured-${selectedStructuredCategory}` : category}
         onCategoryChange={handleCategoryChange}
