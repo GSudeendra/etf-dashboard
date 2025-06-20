@@ -16,6 +16,11 @@ function DashboardPage() {
     if (categories.length > 0) setSelectedCategory(categories[0].key);
   }, [categories]);
 
+  // Scroll to top when category changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [selectedCategory]);
+
   const handleStatsClick = () => {
     // Flatten all funds for stats page
     const allEtfs = etfs
@@ -52,7 +57,7 @@ function DashboardPage() {
       ) : etfError ? (
         <div style={{ color: 'red', textAlign: 'center', padding: 40 }}>{etfError.message || String(etfError)}</div>
       ) : (
-        <ETFGrid etfs={etfs} />
+        <ETFGrid etfs={etfs} categoryKey={selectedCategory} />
       )}
     </div>
   );
